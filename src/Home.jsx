@@ -5,18 +5,18 @@ import { Link } from "react-router-dom";
 function Home(props) {
 return (
     <div className="bg-slate-900 flex flex-col items-center justify-center h-screen w-screen">
-    <header className="flex flex-col items-start">
+    <header className="flex flex-col items-start mt-4">
     <h1 className="text-white text-2xl absolute left-8">BBESP</h1>
-    <nav className="flex items-start justify-between gap-5 self-start max-md:max-w-full max-md:flex-wrap">
+    <nav className="absolute right-8">
         <Link
         to="/login"
-        className="text-white text-center text-xl bg-zinc-300 bg-opacity-30 self-stretch grow justify-center items-stretch pl-10 pr-14 py-4 rounded-3xl max-md:px-5"
+        className="text-white text-center text-xl whitespace-nowrap justify-center items-stretch bg-cyan-800 self-center mt-20 px-8 py-6 rounded-[100px] max-md:mt-10 max-md:px-5 mr-3"
         >
         Sign Up
         </Link>
         <Link
         to="#"
-        className="text-white text-center text-xl bg-zinc-300 bg-opacity-30 self-stretch grow justify-center items-stretch pl-10 pr-14 py-4 rounded-3xl max-md:px-5"
+        className="text-white text-center text-xl whitespace-nowrap justify-center items-stretch bg-cyan-800 self-center mt-20 px-8 py-6 rounded-[100px] max-md:mt-10 max-md:px-5 ml-3"
         >
         Connect to Wallet
         </Link>
