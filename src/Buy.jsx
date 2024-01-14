@@ -3,16 +3,22 @@ import { Link } from "react-router-dom";
 
 
 function Buy(props) {
-const [isSelected, setIsSelected] = useState(false);
+    const wallet_address = "John Doe"; // Replace with the wallet address of the user
 
-const handleButtonClick = () => {
-setIsSelected(!isSelected);
-};
+    const [isSelected, setIsSelected] = useState(false);
+
+    const handleButtonClick = () => {
+    setIsSelected(!isSelected);
+    };
 
 return (
 <div className="bg-slate-900 flex flex-col items-center justify-center h-screen w-screen">
     <header className="flex flex-col items-start">
     <h1 className="text-white text-2xl absolute left-8">BBESP</h1>
+    <div className="flex items-center absolute right-8">
+        <img src="https://e7.pngegg.com/pngimages/782/114/png-clipart-profile-icon-circled-user-icon-icons-logos-emojis-users-thumbnail.png" alt="Profile Icon" className="w-8 h-8 rounded-full" />
+        <span className="text-white text-sm ml-2">{wallet_address}</span>
+    </div>
     <nav className="flex items-start justify-between gap-5 self-start max-md:max-w-full max-md:flex-wrap">
         <Link to="/" className="text-white text-center text-xl self-center whitespace-nowrap my-auto">
         Home
@@ -26,7 +32,7 @@ return (
         >
         Buy
         </Link>
-        <Link to="/dashboard" className="text-white text-center text-xl self-center my-auto">
+        <Link to="/dash" className="text-white text-center text-xl self-center my-auto">
         Dashboard
         </Link>
     </nav>
